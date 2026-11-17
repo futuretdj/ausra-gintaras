@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>AUŠRA — Gintaras Nº 3 · Extrait de Parfum</title>
+<meta name="description" content="Gintaras Nº 3 by AUŠRA. An amber extrait de parfum born on the Baltic coast: sea salt, linden blossom and Baltic amber. Concept product site.">
+<meta name="theme-color" content="#3a1a07">
+<link rel="preload" href="fonts/cormorant-latin-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:Cormorant;src:url(fonts/cormorant-latin-normal.woff2) format('woff2');font-weight:300 700;unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2116}
+@font-face{font-family:Cormorant;src:url(fonts/cormorant-latin-ext-normal.woff2) format('woff2');font-weight:300 700;unicode-range:U+0100-024F,U+1E00-1EFF}
+@font-face{font-family:Cormorant;src:url(fonts/cormorant-cyrillic-normal.woff2) format('woff2');font-weight:300 700;unicode-range:U+0400-045F}
+@font-face{font-family:Cormorant;font-style:italic;src:url(fonts/cormorant-latin-italic.woff2) format('woff2');font-weight:300 700;unicode-range:U+0000-00FF,U+2000-206F}
+@font-face{font-family:Cormorant;font-style:italic;src:url(fonts/cormorant-latin-ext-italic.woff2) format('woff2');font-weight:300 700;unicode-range:U+0100-024F}
+@font-face{font-family:Manrope;src:url(fonts/manrope-latin.woff2) format('woff2');font-weight:200 800;unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2116}
+@font-face{font-family:Manrope;src:url(fonts/manrope-latin-ext.woff2) format('woff2');font-weight:200 800;unicode-range:U+0100-024F}
+:root{--bg1:#6a3510;--bg2:#120703;--fg:#f6ead8;--mut:rgba(246,234,216,.7);--acc:#e9b35f;--line:rgba(246,234,216,.2);--card:rgba(255,255,255,.06)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg2);color:var(--fg);font:400 16px/1.7 Manrope,system-ui,sans-serif;overflow-x:hidden}
+#bg{position:fixed;inset:0;z-index:0;background:radial-gradient(65% 60% at 50% 45%,var(--bg1) 0%,var(--bg2) 78%)}
+#grain{position:fixed;inset:-50%;z-index:0;pointer-events:none;opacity:.06;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");animation:grain 1.2s steps(3) infinite}
+@keyframes grain{50%{transform:translate(3%,-2%)}}
+#bigtitle{position:fixed;left:0;right:0;top:50%;transform:translateY(-55%);z-index:1;text-align:center;pointer-events:none}
+#bigtitle .k{font:500 13px/1 Manrope;letter-spacing:.7em;color:var(--acc);margin-bottom:2.5vh}
+#bigtitle h1{font:300 clamp(70px,16vw,290px)/.85 Cormorant,serif;letter-spacing:.06em;color:transparent;-webkit-text-stroke:1px rgba(246,234,216,.5);background:linear-gradient(180deg,rgba(246,234,216,.28),rgba(246,234,216,0) 90%);-webkit-background-clip:text;background-clip:text}
+#bigtitle .s{font:italic 400 clamp(18px,1.8vw,26px) Cormorant;color:var(--mut);margin-top:2vh}
+canvas#gl{position:fixed;inset:0;width:100vw;height:100vh;z-index:2;pointer-events:none;transition:opacity .6s}
+header{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:22px clamp(18px,4vw,56px)}
+.logo{font:500 22px Cormorant;letter-spacing:.42em}
+nav{display:flex;gap:26px;font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+nav a{color:var(--fg);text-decoration:none;opacity:.7}nav a:hover{opacity:1}
+.cta-s{border:1px solid var(--line);padding:9px 20px;border-radius:40px;font:500 12px Manrope;letter-spacing:.14em;text-transform:uppercase;color:var(--fg);background:rgba(255,255,255,.05);backdrop-filter:blur(8px);cursor:pointer}
+main{position:relative;z-index:3}
+section{position:relative;min-height:100vh;display:flex;align-items:center;padding:110px clamp(20px,7vw,120px)}
+section .t{max-width:500px}
+section.r{justify-content:flex-end}
+section.c{justify-content:center;text-align:center}
+.eyebrow{font-size:11.5px;letter-spacing:.42em;text-transform:uppercase;color:var(--acc);margin-bottom:18px;display:flex;align-items:center;gap:12px}
+.eyebrow:before{content:"";width:30px;height:1px;background:currentColor}
+h2{font:400 clamp(38px,4.4vw,66px)/1.02 Cormorant;letter-spacing:-.005em;margin-bottom:22px}
+h2 em{font-style:italic;color:var(--acc)}
+p{color:var(--mut);margin-bottom:14px}
+p.lead{font-size:17.5px;color:var(--fg);opacity:.92}
+.drop{float:left;font:400 64px/.8 Cormorant;margin:6px 10px 0 0;color:var(--acc)}
+.sig{font:italic 400 26px Cormorant;color:var(--fg);margin-top:8px}
+.sig small{display:block;font:500 11px Manrope;letter-spacing:.3em;text-transform:uppercase;color:var(--mut);font-style:normal;margin-top:4px}
+/* notes */
+.tier{border-top:1px solid var(--line);padding:16px 0 6px}
+.tier h3{font:500 12px Manrope;letter-spacing:.3em;text-transform:uppercase;color:var(--acc);display:flex;justify-content:space-between}
+.tier h3 span{color:var(--mut);letter-spacing:.1em}
+.notes{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 8px}
+.note{font:italic 500 21px Cormorant;padding:3px 14px;border:1px solid var(--line);border-radius:40px;background:var(--card)}
+.tier p{font-size:14.5px;margin:4px 0 8px}
+/* timeline */
+.tl{position:relative;margin-top:26px;padding-left:28px}
+.tl:before{content:"";position:absolute;left:6px;top:8px;bottom:8px;width:1px;background:linear-gradient(var(--acc),transparent)}
+.tl .st{position:relative;margin-bottom:20px}
+.tl .st:before{content:"";position:absolute;left:-27px;top:9px;width:11px;height:11px;border-radius:50%;background:var(--bg2);border:1.5px solid var(--acc)}
+.tl b{font:500 13px Manrope;letter-spacing:.18em;text-transform:uppercase;color:var(--acc)}
+.tl h4{font:400 25px/1.2 Cormorant;margin:2px 0 4px}
+.tl p{font-size:14.5px;margin:0}
+/* craft list */
+.parts{margin-top:22px;list-style:none;counter-reset:p}
+.parts li{counter-increment:p;display:flex;gap:16px;padding:13px 0;border-top:1px solid var(--line);font-size:14.5px;color:var(--mut)}
+.parts li:before{content:counter(p,upper-roman);font:600 15px Cormorant;color:var(--acc);min-width:24px;padding-top:2px}
+.parts li b{color:var(--fg);font-weight:600;display:block}
+/* origins */
+.origins{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px;text-align:left}
+.org{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;backdrop-filter:blur(10px)}
+.org .ic{font-size:30px}
+.org h4{font:500 24px/1.15 Cormorant;margin:8px 0 2px}
+.org .pl{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--acc);margin-bottom:8px}
+.org p{font-size:14px;margin:0}
+section#origins .t{max-width:1040px}
+/* stats + reviews */
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:22px 30px;margin:26px 0}
+.stat b{display:block;font:400 54px/1 Cormorant}
+.stat span{font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--mut)}
+.bar{height:3px;background:var(--line);border-radius:3px;margin-top:8px;overflow:hidden}.bar i{display:block;height:100%;width:0;background:var(--acc);transition:width 1.6s cubic-bezier(.2,.7,.2,1)}
+.in .bar i{width:var(--w)}
+blockquote{font:italic 400 23px/1.35 Cormorant;border-left:2px solid var(--acc);padding:4px 0 4px 18px;margin:18px 0;color:var(--fg)}
+blockquote cite{display:block;font:500 11px Manrope;letter-spacing:.24em;text-transform:uppercase;color:var(--mut);font-style:normal;margin-top:8px}
+/* buy */
+.sizes{display:flex;gap:12px;margin:24px 0 10px;flex-wrap:wrap}
+.size{border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:16px;padding:14px 18px;min-width:110px;text-align:left;cursor:pointer;font:500 13px Manrope;transition:border-color .25s,background .25s}
+.size b{display:block;font:500 28px/1 Cormorant;margin-bottom:4px}
+.size.on{border-color:var(--acc);background:rgba(233,179,95,.14)}
+.price{font:400 clamp(46px,5vw,70px)/1 Cormorant;margin:14px 0 4px}
+.small{font-size:13px;color:var(--mut)}
+.btn{display:inline-flex;gap:10px;align-items:center;margin-top:22px;padding:17px 36px;border-radius:50px;background:var(--fg);color:var(--bg2);font:600 13px Manrope;letter-spacing:.2em;text-transform:uppercase;border:0;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(0,0,0,.35)}
+.perks{display:flex;gap:18px;flex-wrap:wrap;margin-top:22px;font-size:13px;color:var(--mut)}
+/* faq */
+section#faq{align-items:flex-start}
+section#faq .t{max-width:760px;margin:0 auto;width:100%}
+details{border-top:1px solid var(--line);padding:18px 0}
+details:last-child{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;list-style:none;font:400 25px/1.25 Cormorant;display:flex;justify-content:space-between;gap:20px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";color:var(--acc);font-family:Manrope;font-weight:300;transition:transform .3s}
+details[open] summary:after{transform:rotate(45deg)}
+details p{margin:12px 0 0;font-size:15px}
+footer{position:relative;z-index:3;padding:40px clamp(20px,7vw,120px) 50px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--mut);font-size:13px;border-top:1px solid var(--line)}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+#progress{position:fixed;right:clamp(14px,2.5vw,36px);top:50%;transform:translateY(-50%);z-index:10;display:flex;flex-direction:column;gap:10px}
+#progress i{width:6px;height:6px;border-radius:50%;background:var(--fg);opacity:.25;transition:opacity .3s,transform .3s}
+#progress i.on{opacity:1;transform:scale(1.5)}
+#loader{position:fixed;inset:0;z-index:100;background:#120703;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;transition:opacity .9s,visibility .9s}
+#loader.gone{opacity:0;visibility:hidden}
+#loader .logo{color:#f6ead8;font-size:30px}
+#loader .bar2{width:160px;height:1px;background:rgba(246,234,216,.2);overflow:hidden}
+#loader .bar2 i{display:block;height:100%;width:0;background:#e9b35f;transition:width .3s}
+#modal{position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.55);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:20px}
+#modal.on{display:flex}
+#modal .box{background:#1a0d06;color:#f6ead8;border:1px solid rgba(246,234,216,.15);border-radius:22px;padding:34px;max-width:440px;text-align:center}
+#modal h3{font:400 32px Cormorant;margin-bottom:10px}
+@media (max-width:860px){
+ nav{display:none}
+ section,section.r,section.c{align-items:flex-end;justify-content:center;text-align:left;padding:52vh 20px 70px}
+ section#hero{padding-bottom:9vh}
+ section .t{width:100%;background:linear-gradient(180deg,rgba(0,0,0,0),var(--bg2) 70px);padding-top:40px;border-radius:0}
+ section.c .t{text-align:center}
+ section#faq{padding-top:110px}
+ section#faq .t{background:none;padding-top:0}
+ h2{font-size:40px}
+ .origins{grid-template-columns:1fr}
+ #progress{display:none}
+ #bigtitle{transform:translateY(-140%)}
+ .stats{gap:16px}
+ .stat b{font-size:44px}
+}
+@media (prefers-reduced-motion:reduce){.reveal{transition:none;opacity:1;transform:none}#grain{animation:none}}
+</style>
+<script type="importmap">{"imports":{"three":"./lib/three.module.js","three/addons/":"./lib/"}}</script>
+</head>
+<body>
+<div id="loader"><div class="logo">AUŠRA</div><div class="bar2"><i id="lbar"></i></div></div>
+<div id="bg"></div><div id="grain"></div>
+<div id="bigtitle"><div class="k">AUŠRA · EXTRAIT DE PARFUM</div><h1>GINTARAS</h1><div class="s">Nº 3 — the scent of amber at dawn</div></div>
+<canvas id="gl"></canvas>
+<header><div class="logo">AUŠRA</div><nav><a href="#story">Story</a><a href="#notes">Notes</a><a href="#time">On skin</a><a href="#origins">Ingredients</a><a href="#buy">Shop</a></nav><button class="cta-s" data-go="buy">Shop</button></header>
+<div id="progress"></div>
+
+<main>
+ <section id="hero" class="c">
+  <div style="position:absolute;left:0;right:0;bottom:7vh;text-align:center"><p style="letter-spacing:.06em;font-size:15px">Hand-poured in Klaipėda · 50 ml · 22% concentration</p></div>
+ </section>
+
+ <section id="story">
+  <div class="t reveal">
+   <div class="eyebrow">I — The story</div>
+   <h2>Born where the Baltic <em>gives back</em> its amber.</h2>
+   <p class="lead"><span class="drop">E</span>very winter, after the big storms, people walk the beaches of the Curonian Spit at first light. The sea has churned the seabed overnight, and the shore glitters with small pieces of amber — resin from forests that stood here forty million years ago.</p>
+   <p>Gintaras is our attempt to bottle that moment: cold salt air, wet pine, the faint smoke of a fire somewhere behind the dunes, and the warm, honeyed glow of amber held in a closed hand. It is not a sweet amber. It is the amber of the north — clear, resinous and a little wild.</p>
+   <p>Our perfumer spent two years and 311 trials on the formula. The brief was one sentence long: <i>“Make it smell like dawn on the Spit in January.”</i></p>
+   <div class="sig">Rūta Aleknaitė<small>Founder &amp; nose, AUŠRA</small></div>
+  </div>
+ </section>
+
+ <section id="notes" class="r">
+  <div class="t reveal">
+   <div class="eyebrow">II — The notes</div>
+   <h2>A pyramid in <em>three tides.</em></h2>
+   <p>Every fragrance unfolds in layers. The light molecules reach you first and fade fastest; the heavy ones arrive slowly and stay for hours. Gintaras was built so that each tide hands over to the next without a gap.</p>
+   <div class="tier"><h3>Top <span>first 15 minutes</span></h3><div class="notes"><span class="note">Sea salt</span><span class="note">Calabrian bergamot</span><span class="note">Pink pepper</span></div><p>A bright, almost cold opening — like opening a window onto the sea. The pepper gives a small spark that keeps it from feeling soapy.</p></div>
+   <div class="tier"><h3>Heart <span>15 min – 3 hours</span></h3><div class="notes"><span class="note">Linden blossom</span><span class="note">Orris butter</span><span class="note">Heather</span></div><p>Linden is the tree of every Lithuanian village. Here it is soft and honeyed, held up by powdery iris and dry heather from the dunes.</p></div>
+   <div class="tier"><h3>Base <span>3 hours and beyond</span></h3><div class="notes"><span class="note">Amber accord</span><span class="note">Pine resin</span><span class="note">Smoked cedar</span><span class="note">Labdanum</span></div><p>The warm finish that stays on scarves for days: resinous, gently smoky and glowing — the reason the fragrance carries its name.</p></div>
+  </div>
+ </section>
+
+ <section id="time">
+  <div class="t reveal">
+   <div class="eyebrow">III — On the skin</div>
+   <h2>How one spray <em>changes</em> through the day.</h2>
+   <p>Perfume is a living thing. Your skin temperature, the weather and even the fabric you wear change how it opens. This is how Gintaras typically behaves on warm skin.</p>
+   <div class="tl">
+    <div class="st"><b>0 min</b><h4>Salt &amp; spark</h4><p>Citrus and sea air burst out. Wait a moment before judging — the opening is the shortest chapter.</p></div>
+    <div class="st"><b>30 min</b><h4>The blossom</h4><p>Linden and iris rise. The scent sits closer to the body, soft and creamy, like sunlight on a wooden wall.</p></div>
+    <div class="st"><b>3 hours</b><h4>The glow</h4><p>Amber and pine resin take over. People notice it when you walk past, not when you stand still.</p></div>
+    <div class="st"><b>8+ hours</b><h4>The memory</h4><p>A warm, smoky skin scent remains. On wool or cashmere it can still be found the next morning.</p></div>
+   </div>
+  </div>
+ </section>
+
+ <section id="craft" class="r">
+  <div class="t reveal">
+   <div class="eyebrow">IV — The bottle</div>
+   <h2>Made like <em>a jewel.</em></h2>
+   <p>We refused to put an amber perfume in an ordinary bottle. Every flacon is made in small batches and assembled by hand — five parts, each with its own maker.</p>
+   <ul class="parts">
+    <li><span><b>Faceted cap</b>Solid zamac, hand-polished and plated in 24-carat gold. Heavy enough to feel in the palm.</span></li>
+    <li><span><b>Fine-mist atomiser</b>Releases 0.1 ml per spray in a cloud, not a jet, so the scent settles evenly on skin.</span></li>
+    <li><span><b>Gold collar</b>Crimped by hand. Nothing glued, so the bottle can be refilled at our boutique.</span></li>
+    <li><span><b>Thick-walled glass</b>Mouth-blown, 9 mm at the base. The weight catches light like a piece of amber.</span></li>
+    <li><span><b>The juice</b>Aged for eight weeks in steel before bottling, so the notes marry and the colour turns to honey.</span></li>
+   </ul>
+  </div>
+ </section>
+
+ <section id="origins" class="c">
+  <div class="t reveal">
+   <div class="eyebrow">V — Ingredients</div>
+   <h2>Where every note <em>comes from.</em></h2>
+   <p style="max-width:620px;margin:0 auto 6px">We buy directly from growers wherever we can, and we publish where the main materials come from. Natural materials make up 71% of the formula.</p>
+   <div class="origins">
+    <div class="org"><div class="ic">🌊</div><h4>Sea salt accord</h4><div class="pl">Curonian Spit, Lithuania</div><p>A mineral accord recreated from water samples taken at Nida. Clean, airy, faintly ozonic.</p></div>
+    <div class="org"><div class="ic">🍋</div><h4>Bergamot</h4><div class="pl">Reggio Calabria, Italy</div><p>Cold-pressed from the peel of fruit picked in December, when the oil is greenest.</p></div>
+    <div class="org"><div class="ic">🌼</div><h4>Linden blossom</h4><div class="pl">Dzūkija, Lithuania</div><p>Flowers gathered in July by a family cooperative and extracted gently to keep the honey note.</p></div>
+    <div class="org"><div class="ic">💜</div><h4>Orris butter</h4><div class="pl">Tuscany, Italy</div><p>Iris roots dried for three years before distillation — one of the most precious materials in perfumery.</p></div>
+    <div class="org"><div class="ic">🌲</div><h4>Pine resin</h4><div class="pl">Baltic forests</div><p>Collected from fallen trees only. Gives the base its dark, sticky, forest-after-rain warmth.</p></div>
+    <div class="org"><div class="ic">🟠</div><h4>Amber accord</h4><div class="pl">Our own formula</div><p>Labdanum, benzoin and vanilla, balanced so it glows without turning sugary. No real amber is used.</p></div>
+   </div>
+  </div>
+ </section>
+
+ <section id="proof">
+  <div class="t reveal">
+   <div class="eyebrow">VI — In numbers</div>
+   <h2>Quiet, but it <em>stays.</em></h2>
+   <div class="stats">
+    <div class="stat"><b data-count="10">0</b><span>hours on skin</span><div class="bar"><i style="--w:85%"></i></div></div>
+    <div class="stat"><b data-count="22" data-suf="%">0</b><span>oil concentration</span><div class="bar"><i style="--w:88%"></i></div></div>
+    <div class="stat"><b data-count="71" data-suf="%">0</b><span>natural materials</span><div class="bar"><i style="--w:71%"></i></div></div>
+    <div class="stat"><b data-count="311">0</b><span>trials to the formula</span><div class="bar"><i style="--w:100%"></i></div></div>
+   </div>
+   <blockquote>“It smells like a sauna by the sea — wood, smoke and something golden. I get asked about it every single time.”<cite>Ieva, Vilnius · early tester</cite></blockquote>
+   <blockquote>“The opening is fresh, then it turns into the coziest amber I own. Lasts all day on my coat.”<cite>Marcus, Copenhagen · early tester</cite></blockquote>
+  </div>
+ </section>
+
+ <section id="buy" class="r">
+  <div class="t reveal">
+   <div class="eyebrow">VII — Make it yours</div>
+   <h2>Gintaras <em>Nº 3</em></h2>
+   <p>Extrait de parfum. Choose your size — the bottle above changes with you.</p>
+   <div class="sizes" id="sizes">
+    <button class="size" data-s="30" data-p="95"><b>30 ml</b>Travel</button>
+    <button class="size on" data-s="50" data-p="145"><b>50 ml</b>Signature</button>
+    <button class="size" data-s="100" data-p="220"><b>100 ml</b>Collector</button>
+   </div>
+   <div class="price" id="price">€145</div>
+   <div class="small">Free 2 ml sample with every order · Refills at 30% off</div>
+   <button class="btn" data-buy>Add to bag →</button>
+   <div class="perks"><span>🚚 2–4 days across the EU</span><span>🎁 Gift wrapping</span><span>↺ 30-day returns</span></div>
+  </div>
+ </section>
+
+ <section id="faq">
+  <div class="t reveal">
+   <div class="eyebrow">VIII — Questions</div>
+   <h2>Before you <em>choose.</em></h2>
+   <details><summary>Is Gintaras for women or men?</summary><p>For anyone. Amber, wood and salt have no gender. Testers split almost exactly in half — some wear it on a silk scarf, others on a wool coat.</p></details>
+   <details><summary>Is it very sweet?</summary><p>No. The amber accord is balanced with sea salt, pine resin and smoke, so it feels warm rather than sugary. If you find most amber fragrances too heavy, try the 2 ml sample first.</p></details>
+   <details><summary>Where should I apply it?</summary><p>Two sprays on the pulse points — the inside of the wrists and the base of the neck — and one on clothing if you want it to last into the next day. Don't rub your wrists together: it crushes the top notes.</p></details>
+   <details><summary>Does it contain real amber?</summary><p>No. Fossil amber has almost no smell. “Amber” in perfumery is an accord of resins and balsams — in our case labdanum, benzoin and vanilla — built to evoke its warmth.</p></details>
+   <details><summary>How should I store the bottle?</summary><p>Away from sunlight and heat, ideally in its box. A bathroom is the worst place: humidity and temperature changes age perfume faster. Stored well, it keeps for five years or more.</p></details>
+   <details><summary>Can I refill it?</summary><p>Yes. The collar is crimped, not glued. Bring or send the bottle back and we refill it at 30% off — better for you and for the planet.</p></details>
+  </div>
+ </section>
+</main>
+<footer><span>© 2026 AUŠRA Parfums — concept product site, fictional brand</span><span>Design &amp; development: Vanys Studio</span></footer>
+
+<div id="modal"><div class="box"><h3>Added to your bag</h3><p style="color:rgba(246,234,216,.75)">This is a concept website made to show what's possible: a real-time 3D glass bottle, scroll-driven storytelling and a live size selector — no plugins, works on any phone.</p><button class="btn" id="mclose">Close</button></div></div>
+<script type="module" src="main.js"></script>
+</body>
+</html>
